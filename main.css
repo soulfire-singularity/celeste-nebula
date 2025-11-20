@@ -1,7 +1,10 @@
 .bg-starlight-purple {
-background: #2e1a96;
+background-color: #2e1a96;
 
 }
 .nav-link {
 color: #e9e8eb !important;
+}
+.navbar-toggler-bg {
+background-color: #FFFFFF !important;
 }
