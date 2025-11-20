@@ -8,3 +8,6 @@ color: #e9e8eb !important;
 .navbar-toggler-bg {
 background-color: #FFFFFF !important;
 }
+.navbar-toggler-icon-color {
+color: #000000 !important;
+}
