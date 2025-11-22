@@ -7,7 +7,7 @@ background-color: #2e1a96;
 }
 .nav-link {
 color: #e9e8eb !important;
-transition: color 0.2s ease-out 0.2s;
+transition: color 0.1s ease-out 0.1s;
 }
 .nav-link:hover {
 color: #8602fa !important;
