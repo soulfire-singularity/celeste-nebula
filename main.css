@@ -47,36 +47,41 @@ margin-bottom: -2rem !important;
     --bs-btn-disabled-bg: #0d6efd;
     --bs-btn-disabled-border-color: #0d6efd;
 }
-.cyber-btn {
+.synth-btn {
   position: relative;
   padding: 14px 36px;
   font-size: 1.1rem;
-  color: #2e1a96;
+  color: #ff6bff; /* neon pink-purple */
   background: transparent;
-  border: 2px solid #2e1a96;
+  border: 2px solid #ff6bff;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
   transition: 0.3s ease;
-  font-family: 'Orbitron', sans-serif; /* optional but fits theme */
+  font-family: 'Orbitron', sans-serif; /* optional but fits synthwave aesthetic */
   letter-spacing: 2px;
   text-transform: uppercase;
-  box-shadow: 0 0 8px #2e1a96, inset 0 0 8px #2e1a96;
-}
 
-/* Glow pulse on hover */
-.cyber-btn:hover {
-  color: #000;
-  background: #0ff;
+  /* Neon glow */
   box-shadow:
-    0 0 15px #0ff,
-    0 0 30px #0ff,
-    0 0 45px #0ff,
-    inset 0 0 15px #000;
+    0 0 8px #ff6bff,
+    0 0 16px #b400ff inset,
+    inset 0 0 8px #ff6bff;
 }
 
-/* Hologram sweep effect */
-.cyber-btn::after {
+/* Hover: deeper glow + background fill */
+.synth-btn:hover {
+  color: black;
+  background: linear-gradient(135deg, #ff6bff, #b400ff);
+  box-shadow:
+    0 0 15px #ff6bff,
+    0 0 30px #b400ff,
+    0 0 45px #ff00ff,
+    inset 0 0 12px #000;
+}
+
+/* Neon holographic sweep effect */
+.synth-btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -93,18 +98,25 @@ margin-bottom: -2rem !important;
 }
 
 /* Sweep moves across on hover */
-.cyber-btn:hover::after {
+.synth-btn:hover::after {
   transform: translateX(100%);
 }
 
-/* Optional: Neon animation even when idle */
-@keyframes cyber-pulse {
-  0% { box-shadow: 0 0 6px #0ff, inset 0 0 6px #0ff; }
-  50% { box-shadow: 0 0 14px #0ff, inset 0 0 14px #0ff; }
-  100% { box-shadow: 0 0 6px #0ff, inset 0 0 6px #0ff; }
+/* Pulse animation for permanent neon glow */
+@keyframes synth-pulse {
+  0% {
+    box-shadow: 0 0 6px #ff6bff, inset 0 0 6px #b400ff;
+  }
+  50% {
+    box-shadow: 0 0 14px #ff6bff, inset 0 0 14px #b400ff;
+  }
+  100% {
+    box-shadow: 0 0 6px #ff6bff, inset 0 0 6px #b400ff;
+  }
 }
 
-.cyber-btn {
-  animation: cyber-pulse 2s infinite;
+.synth-btn {
+  animation: synth-pulse 2.2s infinite;
 }
+
 
