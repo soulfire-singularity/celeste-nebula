@@ -140,7 +140,7 @@ margin-bottom: -2rem !important;
     margin-left: $carousel-indicator-spacer;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #2e1a96;
+    background-color: #34ebc9;
     background-clip: padding-box;
     border: 0;
     border-top: $carousel-indicator-hit-area-height solid transparent;
