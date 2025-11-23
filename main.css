@@ -142,6 +142,7 @@ margin-bottom: -2rem !important;
     cursor: pointer;
     background-color: #34ebc9;
     background-clip: padding-box;
+    border-radius: 10px;
     border: 0;
     border-top: $carousel-indicator-hit-area-height solid transparent;
     border-bottom: $carousel-indicator-hit-area-height solid transparent;
