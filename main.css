@@ -7,6 +7,10 @@ font-style: normal;
 background-color: #2e1a96;
 
 }
+.bg-starlight-purple {
+background-color: #2e1a96;
+border: 2px solid #34ebc9;
+}
 .nav-link {
 color: #e9e8eb !important;
 transition: color 0.09s ease 0.09s;
