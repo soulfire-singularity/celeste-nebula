@@ -27,3 +27,6 @@ background-color: #FFFFFF !important;
 .navbar-toggler-icon-color {
 color: #000000 !important;
 }
+.carousel-indicators{
+margin-bottom: -2rem !important;
+}
