@@ -125,7 +125,7 @@ margin-bottom: -2rem !important;
   z-index: 2;
   display: flex;
   justify-content: center;
-  padding: 0;
+  padding: 5px;
   margin-right: $carousel-control-width;
   margin-bottom: 1rem;
   margin-left: $carousel-control-width;
