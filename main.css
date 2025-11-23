@@ -46,41 +46,64 @@ margin-bottom: -2rem !important;
     --bs-btn-disabled-bg: #0d6efd;
     --bs-btn-disabled-border-color: #0d6efd;
 }
-@-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
+.cyber-btn {
+  position: relative;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  color: #0ff;
+  background: transparent;
+  border: 2px solid #0ff;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s ease;
+  font-family: 'Orbitron', sans-serif; /* optional but fits theme */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px #0ff, inset 0 0 8px #0ff;
 }
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
 
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
+/* Glow pulse on hover */
+.cyber-btn:hover {
+  color: #000;
+  background: #0ff;
+  box-shadow:
+    0 0 15px #0ff,
+    0 0 30px #0ff,
+    0 0 45px #0ff,
+    inset 0 0 15px #000;
+}
 
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
+/* Hologram sweep effect */
+.cyber-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  transition: transform 0.6s ease;
 }
-.animate__pulse:hover {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
+
+/* Sweep moves across on hover */
+.cyber-btn:hover::after {
+  transform: translateX(100%);
 }
+
+/* Optional: Neon animation even when idle */
+@keyframes cyber-pulse {
+  0% { box-shadow: 0 0 6px #0ff, inset 0 0 6px #0ff; }
+  50% { box-shadow: 0 0 14px #0ff, inset 0 0 14px #0ff; }
+  100% { box-shadow: 0 0 6px #0ff, inset 0 0 6px #0ff; }
+}
+
+.cyber-btn {
+  animation: cyber-pulse 2s infinite;
+}
+
