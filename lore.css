@@ -1,1 +1,156 @@
+body {
+background-color: #212121;
+font-family: 'Orbitron', sans-serif;
+}
+.nav-bg-starlight-purple {
+background-color: #2e1a96;
 
+}
+.bg-starlight-purple {
+background-color: #2e1a96;
+border: 2px solid #34ebc9;
+box-shadow: 0px 5px 5px #34ebc9;
+}
+.bg-starlight-blue {
+background-color: #34ebc9;
+}
+.nav-link {
+color: #e9e8eb !important;
+transition: color 0.09s ease 0.09s;
+}
+.nav-link:hover {
+color: #34ebc9 !important;
+}
+.navbar-toggler-bg {
+background-color: #FFFFFF !important;
+}
+.navbar-toggler-icon-color {
+color: #34ebc9 !important;
+}
+.carousel-indicators{
+margin-bottom: -2rem !important;
+}
+.btn-starlight-purple {
+--bs-btn-color: #fff;
+    --bs-btn-bg: #2e1a96;
+    --bs-btn-border-color: #0d6efd;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #3d2b99;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #3d2b99;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+.synth-btn {
+  position: relative;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  color: #2e1a96; /* neon pink-purple */
+  background: transparent;
+  border: 2px solid #ff6bff;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s ease;
+  font-family: 'Orbitron', sans-serif; /* optional but fits synthwave aesthetic */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  /* Neon glow */
+  box-shadow:
+    0 0 8px #ff6bff,
+    0 0 16px #b400ff inset,
+    inset 0 0 8px #ff6bff;
+}
+
+/* Hover: deeper glow + background fill */
+.synth-btn:hover {
+  color: black;
+  background: linear-gradient(135deg, #ff6bff, #b400ff);
+  box-shadow:
+    0 0 15px #ff6bff,
+    0 0 30px #b400ff,
+    0 0 45px #ff00ff,
+    inset 0 0 12px #000;
+}
+
+/* Neon holographic sweep effect */
+.synth-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  transition: transform 0.6s ease;
+}
+
+/* Sweep moves across on hover */
+.synth-btn:hover::after {
+  transform: translateX(100%);
+}
+
+/* Pulse animation for permanent neon glow */
+@keyframes synth-pulse {
+  0% {
+    box-shadow: 0 0 6px #ff6bff, inset 0 0 6px #b400ff;
+  }
+  50% {
+    box-shadow: 0 0 14px #ff6bff, inset 0 0 14px #b400ff;
+  }
+  100% {
+    box-shadow: 0 0 6px #ff6bff, inset 0 0 6px #b400ff;
+  }
+}
+
+.synth-btn {
+  animation: synth-pulse 2.2s infinite;
+}
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin-right: $carousel-control-width;
+  margin-bottom: 1rem;
+  margin-left: $carousel-control-width;
+
+  [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: $carousel-indicator-width;
+    height: 10px;
+    padding: 0;
+    margin-right: $carousel-indicator-spacer;
+    margin-left: $carousel-indicator-spacer;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #34ebc9;
+    background-clip: padding-box;
+    border-radius: 10px;
+    border: 0;
+    border-top: $carousel-indicator-hit-area-height solid transparent;
+    border-bottom: $carousel-indicator-hit-area-height solid transparent;
+    opacity: $carousel-indicator-opacity;
+    @include transition($carousel-indicator-transition);
+  }
+
+  .active {
+    opacity: $carousel-indicator-active-opacity;
+  }
+}
