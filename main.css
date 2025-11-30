@@ -134,7 +134,7 @@ margin-bottom: -2rem !important;
     box-sizing: content-box;
     flex: 0 1 auto;
     width: $carousel-indicator-width;
-    height: $carousel-indicator-height;
+    height: 10px;
     padding: 0;
     margin-right: $carousel-indicator-spacer;
     margin-left: $carousel-indicator-spacer;
